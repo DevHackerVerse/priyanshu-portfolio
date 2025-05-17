@@ -16,7 +16,7 @@ const Projects = () => {
         { name: "Kotlin", icon: "/priyanshu-portfolio/images/icons/kotlin.png" },
         { name: "XML", icon: "/priyanshu-portfolio/images/icons/xml.png" }
       ],
-      image: "/images/projects/mess-management.jpg", 
+      image: "/priyanshu-portfolio/images/projects/mess-management.jpg", 
       github: "https://github.com/DevHackerVerse/MessManagement"
     },
     {

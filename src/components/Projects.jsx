@@ -28,7 +28,7 @@ const Projects = () => {
         { name: "XML", icon: "/images/icons/xml.png" },
         { name: "Appwrite", icon: "/images/icons/appwrite.png" }
       ],
-      image: "/images/projects/mentor-mentee.jpg",
+      image: "/priyanshu-portfolio/images/projects/mentor-mentee.jpg",
       github: "https://github.com/manishkumar0002/YumXpress"
     },
     {
@@ -43,7 +43,7 @@ const Projects = () => {
         { name: "Kotlin", icon: "/images/icons/kotlin.png" },
         { name: "XML", icon: "/images/icons/xml.png" }
       ],
-      image: "/images/projects/mess-management.jpg", 
+      image: "/priyanshu-portfolio/images/projects/mess-management.jpg", 
       github: "https://github.com/DevHackerVerse/project-repo"
     }
   ];

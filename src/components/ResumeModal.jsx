@@ -30,7 +30,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
         {/* Download Button */}
         <div className="text-right mt-4">
           <a
-            href="/resume/priyanshu_resume.pdf"
+            href="/priyanshu-portfolio/resume/priyanshu_resume.pdf"
             download="Priyanshu_Raj_Resume.pdf"
             className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition"
           >

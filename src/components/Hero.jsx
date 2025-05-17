@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ParticleBackground from './ParticleBackground';
 import ResumeModal from './ResumeModal';
-import profileImg from '../asset/priyanshu-1.png'
+import profileImg from './asset/priyanshu-1.png'
 
 const Hero = () => {
   const typewriterRef = useRef(null);

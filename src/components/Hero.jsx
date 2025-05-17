@@ -159,7 +159,7 @@ const Hero = () => {
             </p>
             
             {/* Improved Button Design */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mb-10">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mb-20 sm:mb-10">
               <a 
                 href="#projects" 
                 className="relative overflow-hidden group bg-primary text-white py-2.5 sm:py-3 px-6 sm:px-8 rounded-md transition-all duration-300 w-full sm:w-auto"
@@ -223,10 +223,45 @@ const Hero = () => {
                 </a>
               ))}
             </div>
+
+            {/* Tech Stack for mobile only */}
+            <div className={`block sm:hidden w-full mb-6 transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-wider">Tech Stack</p>
+              <div className="flex justify-center flex-wrap gap-3">
+                {techStack.map((tech, index) => (
+                  <div 
+                    key={index} 
+                    className="text-center flex flex-col items-center group"
+                    style={{animationDelay: `${index * 100}ms`}}
+                  >
+                    <div 
+                      className="h-10 w-10 mb-2 bg-gray-800 rounded-lg flex items-center justify-center transform transition-all group-hover:scale-110 group-hover:shadow-lg"
+                      style={{boxShadow: `0 4px 10px ${tech.color}30`}}
+                    >
+                      {tech.icon ? (
+                        <img 
+                          src={tech.icon} 
+                          alt={tech.name} 
+                          className="h-6 w-6 object-contain"
+                        />
+                      ) : (
+                        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 5H7V19H3V5Z" fill={tech.color} />
+                          <path d="M10 5H14V19H10V5Z" fill={tech.color} />
+                          <path d="M17 5H21V19H17V5Z" fill={tech.color} />
+                          <path d="M2 12H22" stroke={tech.color} strokeWidth="2" />
+                        </svg>
+                      )}
+                    </div>
+                    <p className="text-xs font-medium uppercase text-gray-400 group-hover:text-primary transition-colors">{tech.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           
           {/* Profile Image Section */}
-          <div className="w-full md:w-2/5 flex justify-center items-center mt-8 md:mt-0">
+          <div className="hidden md:flex w-full md:w-2/5 justify-center items-center mt-8 md:mt-0">
             <div className="relative h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] md:h-[400px] md:w-[400px] flex items-center justify-center">
               {/* Radial gradient background */}
               <div className="absolute inset-0 rounded-full" style={{
@@ -264,11 +299,10 @@ const Hero = () => {
       </div>
 
       {/* Tech Stack */}
-      <div className={`absolute bottom-10 left-0 right-0 z-10 transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`hidden sm:block absolute bottom-20 left-0 right-0 z-10 transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} mt-10 sm:mt-0`}>
         <div className="container mx-auto px-4 sm:px-6">
           <p className="text-center text-gray-400 text-sm mb-4 uppercase tracking-wider">Tech Stack</p>
-          
-          <div className="flex justify-center flex-wrap gap-4 sm:gap-6 md:gap-8">
+          <div className="flex justify-center flex-wrap gap-3 sm:gap-6 md:gap-8">
             {techStack.map((tech, index) => (
               <div 
                 key={index} 
@@ -276,17 +310,17 @@ const Hero = () => {
                 style={{animationDelay: `${index * 100}ms`}}
               >
                 <div 
-                  className="h-12 w-12 sm:h-16 sm:w-16 mb-2 bg-gray-800 rounded-lg flex items-center justify-center transform transition-all group-hover:scale-110 group-hover:shadow-lg"
+                  className="h-10 w-10 sm:h-16 sm:w-16 mb-2 bg-gray-800 rounded-lg flex items-center justify-center transform transition-all group-hover:scale-110 group-hover:shadow-lg"
                   style={{boxShadow: `0 4px 10px ${tech.color}30`}}
                 >
                   {tech.icon ? (
                     <img 
                       src={tech.icon} 
                       alt={tech.name} 
-                      className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
+                      className="h-6 w-6 sm:h-10 sm:w-10 object-contain"
                     />
                   ) : (
-                    <svg className="h-8 w-8 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="h-6 w-6 sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3 5H7V19H3V5Z" fill={tech.color} />
                       <path d="M10 5H14V19H10V5Z" fill={tech.color} />
                       <path d="M17 5H21V19H17V5Z" fill={tech.color} />
@@ -302,7 +336,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 animate-bounce mb-4 sm:mb-0">
         <div className="text-gray-400 flex flex-col items-center cursor-pointer" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}>
           <span className="text-xs uppercase tracking-wider mb-1">Scroll Down</span>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

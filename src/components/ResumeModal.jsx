@@ -20,7 +20,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
         {/* Resume Preview */}
         <div className="mb-4 h-[500px] overflow-hidden">
           <iframe
-            src="/resume/priyanshu_resume.pdf"
+            src="/priyanshu-portfolio/resume/priyanshu_resume.pdf"
             title="Resume"
             className="w-full h-full border-0"
             aria-label="Resume preview"

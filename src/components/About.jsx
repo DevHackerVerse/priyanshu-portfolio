@@ -199,9 +199,7 @@ const About = () => {
                               className="max-w-full max-h-full"
                               onError={(e) => {
                                 e.target.onerror = null;
-                                e.target.parentNode.innerHTML = `<div class='w-7 h-7 rounded-full bg-primary bg-opacity-30 flex items-center justify-center'>
-                                  <span class='text-primary text-xs font-bold'>${skill[0]}</span>
-                                </div>`;
+                                
                               }}
                             />
                           </div>

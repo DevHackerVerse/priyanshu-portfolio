@@ -9,12 +9,12 @@ const Projects = () => {
       title: "Mess Management System",
       description: "Mobile app for users and website for mess management using MySQL as the database.",
       technologies: [
-        { name: "Java", icon: "/images/icons/java.png" },
-        { name: "SpringBoot", icon: "/images/icons/spring-boot.png" },
-        { name: "React", icon: "/images/icons/react.png" },
-        { name: "MySQL", icon: "/images/icons/mysql.png" },
-        { name: "Kotlin", icon: "/images/icons/kotlin.png" },
-        { name: "XML", icon: "/images/icons/xml.png" }
+        { name: "Java", icon: "/priyanshu-portfolio/images/icons/java.png" },
+        { name: "SpringBoot", icon: "/priyanshu-portfolio/images/icons/spring-boot.png" },
+        { name: "React", icon: "/priyanshu-portfolio/images/icons/react.png" },
+        { name: "MySQL", icon: "/priyanshu-portfolio/images/icons/mysql.png" },
+        { name: "Kotlin", icon: "/priyanshu-portfolio/images/icons/kotlin.png" },
+        { name: "XML", icon: "/priyanshu-portfolio/images/icons/xml.png" }
       ],
       image: "/images/projects/mess-management.jpg", 
       github: "https://github.com/DevHackerVerse/MessManagement"
@@ -24,9 +24,9 @@ const Projects = () => {
       title: "Mentor-Mentee App",
       description: "Two-part application for faculty to track student progress and for students to view academic records.",
       technologies: [
-        { name: "Kotlin", icon: "/images/icons/kotlin.png" },
-        { name: "XML", icon: "/images/icons/xml.png" },
-        { name: "Appwrite", icon: "/images/icons/appwrite.png" }
+        { name: "Kotlin", icon: "/priyanshu-portfolio/images/icons/kotlin.png" },
+        { name: "XML", icon: "/priyanshu-portfolio/images/icons/xml.png" },
+        { name: "Appwrite", icon: "/priyanshu-portfolio/images/icons/appwrite.png" }
       ],
       image: "/priyanshu-portfolio/images/projects/mentor-mentee.jpg",
       github: "https://github.com/manishkumar0002/YumXpress"
@@ -36,12 +36,12 @@ const Projects = () => {
       title: "Mess Management System",
       description: "Mobile app for users and website for mess management using MySQL as the database.",
       technologies: [
-        { name: "Java", icon: "/images/icons/java.png" },
-        { name: "SpringBoot", icon: "/images/icons/spring-boot.png" },
-        { name: "React", icon: "/images/icons/react.png" },
-        { name: "MySQL", icon: "/images/icons/mysql.png" },
-        { name: "Kotlin", icon: "/images/icons/kotlin.png" },
-        { name: "XML", icon: "/images/icons/xml.png" }
+        { name: "Java", icon: "/priyanshu-portfolio/images/icons/java.png" },
+        { name: "SpringBoot", icon: "/priyanshu-portfolio/images/icons/spring-boot.png" },
+        { name: "React", icon: "/priyanshu-portfolio/images/icons/react.png" },
+        { name: "MySQL", icon: "/priyanshu-portfolio/images/icons/mysql.png" },
+        { name: "Kotlin", icon: "/priyanshu-portfolio/images/icons/kotlin.png" },
+        { name: "XML", icon: "/priyanshu-portfolio/images/icons/xml.png" }
       ],
       image: "/priyanshu-portfolio/images/projects/mess-management.jpg", 
       github: "https://github.com/DevHackerVerse/project-repo"

@@ -20,7 +20,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
         {/* Resume Preview */}
         <div className="mb-4 h-[500px] overflow-hidden">
           <iframe
-            src={`${process.env.PUBLIC_URL}/priyanshu-portfolio/resume/priyanshu_resume.pdf`}
+            src={`${process.env.PUBLIC_URL}/resume/priyanshu_resume.pdf`}
             title="Resume"
             className="w-full h-full border-0"
             aria-label="Resume preview"
@@ -30,7 +30,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
         {/* Download Button */}
         <div className="text-right mt-4">
           <a
-            href={`${process.env.PUBLIC_URL}/priyanshu-portfolio/resume/priyanshu_resume.pdf`}
+            href={`${process.env.PUBLIC_URL}/resume/priyanshu_resume.pdf`}
             download="Priyanshu_Raj_Resume.pdf"
             className="bg-primary text-white px-6 py-2 rounded hover:bg-opacity-90 transition"
           >

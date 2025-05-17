@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ParticleBackground from './ParticleBackground';
 import ResumeModal from './ResumeModal';
-import profileImg from '../assets/priyanshu-1.png'
 
 const Hero = () => {
   const typewriterRef = useRef(null);
@@ -228,7 +227,7 @@ const Hero = () => {
               </div>
               {/* Profile image */}
               <img 
-                src={profileImg} 
+                src={`${process.env.PUBLIC_URL}/images/priyanshu-1.png`} 
                 alt="Priyanshu Raj" 
                 className="relative z-30 h-[320px] w-[320px] md:h-[400px] md:w-[400px] object-cover rounded-xl shadow-xl"
                 style={{objectPosition: 'top'}}

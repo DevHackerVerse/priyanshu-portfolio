@@ -184,7 +184,7 @@ const About = () => {
                   >
                     {section.skills.map((skill, i) => {
                       const skillLower = skill.toLowerCase().replace(/ /g, '-');
-                      const iconPath = `/images/icons/${skillLower}.png`;
+                      const iconPath = `/priyanshu-portfolio/images/icons/${skillLower}.png`;
                       return (
                         <motion.div
                           key={i}

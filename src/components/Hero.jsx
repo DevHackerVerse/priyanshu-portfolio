@@ -9,12 +9,34 @@ const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [buttonHover, setButtonHover] = useState(null);
+  const [greeting, setGreeting] = useState('Hallo, Guten Morgen');
 
   useEffect(() => {
     // Mark component as loaded with slight delay for entrance animation
     const loadTimer = setTimeout(() => setIsLoaded(true), 100);
     
-    // Only run in browser
+    // Set the greeting based on the time of day
+    const updateGreeting = () => {
+      const hour = new Date().getHours();
+      // German time-appropriate greetings
+      if (hour >= 5 && hour < 12) {
+        setGreeting('Hallo, Guten Morgen'); // Good morning (5am-12pm)
+      } else if (hour >= 12 && hour < 18) {
+        setGreeting('Hallo, Guten Tag'); // Good day/afternoon (12pm-6pm)
+      } else if (hour >= 18 && hour < 22) {
+        setGreeting('Hallo, Guten Abend'); // Good evening (6pm-10pm)
+      } else {
+        setGreeting('Hallo, Gute Nacht'); // Good night (10pm-5am)
+      }
+    };
+    
+    // Initial greeting update
+    updateGreeting();
+    
+    // Update greeting every minute
+    const greetingInterval = setInterval(updateGreeting, 60000);
+    
+    // Only run typewriter in browser
     if (typeof window !== 'undefined') {
       // Import Typewriter dynamically to avoid SSR issues
       import('typewriter-effect/dist/core').then(({ default: Typewriter }) => {
@@ -57,6 +79,7 @@ const Hero = () => {
     // Cleanup
     return () => {
       clearTimeout(loadTimer);
+      clearInterval(greetingInterval);
       if (typewriterRef.current) {
         typewriterRef.current.stop();
       }
@@ -114,7 +137,7 @@ const Hero = () => {
           {/* Text content */}
           <div className="max-w-3xl md:w-3/5">
             <p className="text-gray-400 mb-2 text-lg tracking-wider font-light">
-              <span className="inline-block border-b border-primary pb-1">Hallo, Guten Morgen</span>
+              <span className="inline-block border-b border-primary pb-1">{greeting}</span>
             </p>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2">

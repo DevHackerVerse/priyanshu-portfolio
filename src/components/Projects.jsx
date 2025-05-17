@@ -63,7 +63,7 @@ const Projects = () => {
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
-                    onError={(e) => {e.target.src = '/images/projects/placeholder.jpg'}}
+                    
                   />
                 </div>
                 <div className="p-8">

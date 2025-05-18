@@ -23,7 +23,7 @@ const Hero = () => {
         setGreeting('Hallo, Guten Morgen'); // Good morning (5am-12pm)
       } else if (hour >= 12 && hour < 18) {
         setGreeting('Hallo, Guten Tag'); // Good day/afternoon (12pm-6pm)
-      } else if (hour >= 18 && hour < 22) {
+      } else if (hour >= 18 && hour < 20) {
         setGreeting('Hallo, Guten Abend'); // Good evening (6pm-10pm)
       } else {
         setGreeting('Hallo, Gute Nacht'); // Good night (10pm-5am)
